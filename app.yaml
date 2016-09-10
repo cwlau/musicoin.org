@@ -1,6 +1,6 @@
 # only use these two lines with gae devserver
-# application: berry-blue
-# version: 1
+application: berry-blue
+version: 1
 runtime: python27
 api_version: 1
 threadsafe: yes
