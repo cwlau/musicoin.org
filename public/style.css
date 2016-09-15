@@ -25,6 +25,9 @@ header p {
 header div.join_discussion_link {
 	position: absolute;top:80px;right:  15vw;
 }
+header div.github_link {
+	position: absolute;top:120px;right:  15vw;
+}
 header div.join_discussion_link a{
 	background-color: rgba(255,255,255,0.4);border-radius: 4px;padding:6px 10px;
 	text-decoration: none;color:#115d59;
@@ -33,6 +36,15 @@ header div.join_discussion_link a:hover{
 	background-color: rgba(255,255,255,0.6);
 	box-shadow: 0 0 4px rgba(255,255,255,0.4);
 }
+header div.github_link a{
+	background-color: rgba(255,255,255,0.4);border-radius: 4px;padding:6px 10px;
+	text-decoration: none;color:#115d59;
+}
+header div.github_link a:hover{
+	background-color: rgba(255,255,255,0.6);
+	box-shadow: 0 0 4px rgba(255,255,255,0.4);
+}
+
 section {
 	/* padding:15vh 15vw 0; */
 	position:relative;
