@@ -1,5 +1,5 @@
 # only use these two lines with gae devserver
-application: berry-blue
+application: musicoin-web
 version: 1
 runtime: python27
 api_version: 1
@@ -8,13 +8,29 @@ threadsafe: yes
 
 handlers:
 
-- url: /(.+)
-  static_files: public/\1
-  upload: public/(.*)
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /images
+  static_dir: images
+
+- url: /join
+  script: join_slack.app
+
+- url: /join/.*
+  script: join_slack.app
+
+- url: /\.well-known/acme-challenge/.*
+  script: letsencrypt.app
 
 - url: /
   static_files: public/index.html
   upload: public/index.html
+
+- url: /(.+)
+  static_files: public/\1
+  upload: public/(.*)
 
 
 skip_files:

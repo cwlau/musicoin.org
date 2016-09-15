@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join the Hong Coin Slack Community</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+<style type="text/css">
+body{
+    margin:0;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+a{color:#9d794e;}
+
+.container{
+    width: 90%;max-width:680px;margin: auto;text-align: center; margin-top:130px;
+    background-color: #fff;border:2px solid #dcdcdc;border-radius: 4px;
+    box-shadow: 0px 0px 16px #d2d2d2;
+
+    background: #fff url("/images/bar.png") no-repeat;
+    background-size: 100%;
+}
+
+.container_inner{
+    padding:58px 60px;
+}
+
+.container_inner > div {margin: 12px;text-align: left;}
+
+div.heading{font-size: 34px;font-weight: bold;text-align: center;}
+div.email{
+    border-bottom: 2px dashed #dadada;text-align: center;padding:10px;
+    font-size: 18px;font-weight: bold; width: 80%;
+    margin: auto;margin-top: 30px;margin-bottom: 10px;
+}
+div.tips{color:#999;font-size: 18px;text-align: center;}
+
+
+@media screen and (max-height: 830px) {
+    .container{margin-top:30px;}
+}
+
+@media screen and (max-width: 580px) {
+    .container_inner {
+        padding: 30px 40px
+    }
+    .container{margin-top:30px;}
+}
+
+@media screen and (max-width: 400px) {
+    .container_inner {
+        padding: 20px 20px
+    }
+    .container{margin-top:20px;}
+}
+
+</style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+
+<div class="container"><div class="container_inner">
+
+    <div class="heading">
+        An email is on its way.
+    </div>
+
+    <div class="email">{{ email }}</div>
+    <div class="tips">
+        When your email arrives, click the link provided to complete signup.
+    </div>
+
+
+
+</div></div>
+
+
+
+
+
+</body>
+</html>

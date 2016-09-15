@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join the Musicoin Slack Community</title>
+
+
+<script type="text/javascript">
+
+// http://html1.freeiz.com/Cookie_Script.html
+
+var docCookies = {
+  getItem: function (sKey) {
+    if (!sKey) { return null; }
+    return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+  },
+  setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+    if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
+    var sExpires = "";
+    if (vEnd) {
+      switch (vEnd.constructor) {
+        case Number:
+          sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+          break;
+        case String:
+          sExpires = "; expires=" + vEnd;
+          break;
+        case Date:
+          sExpires = "; expires=" + vEnd.toUTCString();
+          break;
+      }
+    }
+    document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+    return true;
+  },
+  removeItem: function (sKey, sPath, sDomain) {
+    if (!this.hasItem(sKey)) { return false; }
+    document.cookie = encodeURIComponent(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "");
+    return true;
+  },
+  hasItem: function (sKey) {
+    if (!sKey) { return false; }
+    return (new RegExp("(?:^|;\\s*)" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+  },
+  keys: function () {
+    var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
+    for (var nLen = aKeys.length, nIdx = 0; nIdx < nLen; nIdx++) { aKeys[nIdx] = decodeURIComponent(aKeys[nIdx]); }
+    return aKeys;
+  }
+};
+
+// checks if you are registered user
+if (docCookies.getItem('slack-registered') == 'yes'){
+    location.href = "https://musicoin.slack.com/";
+}
+
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+<style type="text/css">
+body{
+    margin:0;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+a{color:#216982;}
+
+.container{
+    width: 90%;max-width:680px;margin: auto;text-align: center; margin-top:130px;
+    background-color: #fff;border:2px solid #dcdcdc;border-radius: 4px;
+    box-shadow: 0px 0px 16px #d2d2d2;
+}
+
+.container_inner{
+    padding:58px 60px;
+}
+
+.container_inner > div {margin: 12px;text-align: center;}
+.container .logos{text-align: center;}
+.container .logos img{width:90px;margin:auto;}
+.container .dialog_desc{margin:28px 0;font-size:18px;}
+.container .dialog_desc ul{margin-top:4px;}
+
+div.form{text-align: center;}
+input{padding: 8px; font-size: 18px;font-family: 'Source Sans Pro', sans-serif;}
+input[type=text]{
+    width:80%;border:none;border-left: 5px solid #216982;border-bottom: 2px dashed #dadada;text-align: center;
+    outline: none;
+}
+input[type=text]:focus{background-color: #fffef9;}
+input[type=button]{color:#fff;border:none;background-color: #216982;cursor: pointer;margin-top:20px;padding:10px 30px;border-radius: 4px;}
+input[type=button]:hover{opacity: 0.6;}
+input[type=button]:focus{opacity: 0.8;}
+
+div.slack_signin_link{margin-top:8px;}
+
+
+@media screen and (max-height: 830px) {
+    .container{margin-top:30px;}
+}
+
+@media screen and (max-width: 580px) {
+    .container_inner {
+        padding: 30px 40px
+    }
+    .container .logos img{width:100%;}
+    input[type=text]{width:90%;}
+
+    .container{margin-top:30px;}
+}
+
+@media screen and (max-width: 400px) {
+    .container_inner {
+        padding: 20px 20px
+    }
+    input[type=text]{width:94%;}
+    .container{margin-top:20px;}
+}
+
+</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+
+<div class="container"><div class="container_inner">
+
+    <div class="logos">
+        <img src="/images/logo.png" />
+    </div>
+
+    <div class="dialog_desc">
+
+        <div>
+        Enter your email to join the Musicoin Community
+        </div>
+    </div>
+
+
+    <div class="form">
+        <input type="text" class="email" placeholder="Email" />
+
+        <div>
+            <input class="submit" type="button" value="Invite Me!">
+        </div>
+
+        <div class="slack_signin_link">
+            or <a href="https://musicoin.slack.com/">Sign in</a>
+        </div>
+    </div>
+
+</div></div>
+
+
+
+
+
+<script type="text/javascript">
+
+$(".submit").click(function(){
+
+    if($(".email").val() == ""){
+        alert("Please enter an email address!");
+        return;
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "/join/slack/invite",
+        dataType: "json",
+        data: {
+            "email": $(".email").val()
+        }
+    }).done(function( data ) {
+
+        if(data.status == "success"){
+            docCookies.setItem('slack-registered', "yes");
+            location.href = ("/join/invited?email=" + $(".email").val());
+        }else{
+            if(data.message == "invalid_email"){
+                alert("Is this an email address?");
+
+            }else if(data.message == "already_invited"){
+                alert("Looks like you had got the invitation. Check your mailbox again?");
+
+            }else if(data.message == "already_in_team"){
+                var conf = confirm("You are already in the community! Do you wish to login now?");
+                if(conf){
+                    docCookies.setItem('slack-registered', "yes");
+                    location.href = "https://musicoin.slack.com/";
+                }
+
+            }else{
+                alert("There is an error procssing your request. Please try again.");
+
+            }
+        }
+    });
+
+});
+</script>
+
+
+
+</body>
+</html>
