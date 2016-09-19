@@ -45,6 +45,14 @@ def slack_invite(email):
 
 
 
+class HomePageHandler(webapp2.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), 'public/index.html')
+        self.response.out.write(template.render(path, {}))
+
+
+
+
 class SlackInvitePageHandler(webapp2.RequestHandler):
     def get(self):
         template_values = {
@@ -130,7 +138,11 @@ class ReturnHomePageHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     # routes.DomainRoute(r'<:(slack\.hongcoin\.org|localhost)>', [
     # Slack signup
+    routes.DomainRoute(r'<:(musicoin.org|www.musicoin.org|slack.default.musicoin-web.appspot.com)>', [
+        webapp2.Route('/', HomePageHandler),
+    ]),
     routes.DomainRoute(r'<:(slack.musicoin.org|slack.default.musicoin-web.appspot.com)>', [
+        webapp2.Route('/', SlackInvitePageHandler),
         webapp2.Route('/join', SlackInvitePageHandler),
         webapp2.Route('/join/', SlackInvitePageHandler),
         webapp2.Route('/join/invited', SlackInviteSuccessPageHandler),
@@ -139,12 +151,14 @@ app = webapp2.WSGIApplication([
 
     # Slack signup for localhost
     routes.DomainRoute(r'<:(localhost)>', [
-        webapp2.Route('/join/', SlackInvitePageHandler),
+        webapp2.Route('/', HomePageHandler),
+        webapp2.Route('/join', SlackInvitePageHandler),
         webapp2.Route('/join/', SlackInvitePageHandler),
         webapp2.Route('/join/invited', SlackInviteSuccessPageHandler),
         webapp2.Route('/join/slack/invite', SlackInviteActionHandler),
     ]),
 
+    ('/', HomePageHandler),
     ('/.*', ReturnHomePageHandler),
 
-], debug=True)
+])
