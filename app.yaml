@@ -1,6 +1,6 @@
 # only use these two lines with gae devserver
 application: musicoin-web
-version: 2
+version: layout2
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -16,6 +16,15 @@ handlers:
   static_dir: images
 
 - url: /
+  script: main.app
+
+- url: /howItWorks
+  script: main.app
+
+- url: /musicians
+  script: main.app
+
+- url: /developers
   script: main.app
 
 - url: /join

@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Musicoin - Every play is born to be equal</title>
+    <meta name="description" content="Musicoin - Every play is born to be equal" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+
+<link href='//fonts.googleapis.com/css?family=Roboto+Mono|Droid+Sans+Mono' rel="stylesheet" />
+<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+
+<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+
+
+{% block head_content %}{% endblock %}
+
+
+</head>
+<body>
+
+
+{% block body_header_content %}
+
+<div class="header_div_fixed">
+    <div class="header_div container">
+
+        <div class="header">
+            <ul class="logo_ul">
+                <li>
+
+                    <a href="/" class="headline_link"><img src="/images/logo.png" class="logo" /></a>
+                    <div class="headline">
+                        <div class="headline_text">Musicoin</div>
+                    </div>
+
+
+
+                </li>
+            </ul>
+
+
+            <ul class="top_navbar right_top_navbar">
+
+                <a href="/#"><li class="link_larger">
+                    How it works
+                </li></a>
+
+                <a href="/musicians"><li class="link_larger">
+                    To musicians
+                </li></a>
+
+                <a href="/developers"><li class="link_larger">
+                    To developers
+                </li></a>
+
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="header_spacer_block"></div>
+
+{% endblock %}
+
+
+{% block body_content %}{% endblock %}
+
+
+
+{% block body_footer_content %}
+
+
+
+<div class="full_block footer_block">
+    <div class="container">
+
+        <nav>
+            <div class="nav-wrapper">
+                &copy; 2016 musicoin.org  All rights reserved.
+                <ul class="links_ui">
+                    <li><a href="https://slack.musicoin.org/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/muscoins" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/muscoin" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:musicoin@musicoin.org"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
+{% block body_footerscript_content %}
+
+{% endblock %}
+
+
+
+
+</body>
+</html>

@@ -47,7 +47,22 @@ def slack_invite(email):
 
 class HomePageHandler(webapp2.RequestHandler):
     def get(self):
-        path = os.path.join(os.path.dirname(__file__), 'public/index.html')
+        path = os.path.join(os.path.dirname(__file__), 'template/index.html')
+        self.response.out.write(template.render(path, {}))
+
+class HowItWorksHandler(webapp2.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), 'template/howItWorks.html')
+        self.response.out.write(template.render(path, {}))
+
+class MusiciansHandler(webapp2.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), 'template/musicians.html')
+        self.response.out.write(template.render(path, {}))
+
+class DevelopersHandler(webapp2.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), 'template/developers.html')
         self.response.out.write(template.render(path, {}))
 
 
@@ -137,10 +152,14 @@ class ReturnHomePageHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     # routes.DomainRoute(r'<:(slack\.hongcoin\.org|localhost)>', [
-    # Slack signup
-    routes.DomainRoute(r'<:(musicoin.org|www.musicoin.org|slack.default.musicoin-web.appspot.com)>', [
+    routes.DomainRoute(r'<:(musicoin.org|www.musicoin.org|localhost|layout2.musicoin-web.appspot.com)>', [
         webapp2.Route('/', HomePageHandler),
+        webapp2.Route('/howItWorks', HowItWorksHandler),
+        webapp2.Route('/musicians', MusiciansHandler),
+        webapp2.Route('/developers', DevelopersHandler),
     ]),
+
+    # Slack signup
     routes.DomainRoute(r'<:(slack.musicoin.org|slack.default.musicoin-web.appspot.com)>', [
         webapp2.Route('/', SlackInvitePageHandler),
         webapp2.Route('/join', SlackInvitePageHandler),
