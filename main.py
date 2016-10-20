@@ -154,7 +154,7 @@ app = webapp2.WSGIApplication([
     # routes.DomainRoute(r'<:(slack\.hongcoin\.org|localhost)>', [
     routes.DomainRoute(r'<:(musicoin.org|www.musicoin.org|localhost|layout2.musicoin-web.appspot.com)>', [
         webapp2.Route('/', HomePageHandler),
-        webapp2.Route('/howItWorks', HowItWorksHandler),
+        webapp2.Route('/about', HowItWorksHandler),
         webapp2.Route('/musicians', MusiciansHandler),
         webapp2.Route('/developers', DevelopersHandler),
     ]),

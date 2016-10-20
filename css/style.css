@@ -1,0 +1,83 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
+
+
+/* overwrite the styles */
+
+h1.mont.teal-text.text-lighten-2{font-size: 3.2em;color:#e8e8e8 !important;margin-top: 100px;}
+.subheader{color:#ffd411 !important;}
+.mont{font-family: 'Montserrat', sans-serif;}
+ul.links li{display: inline-block;vertical-align: top;}
+ul.links li a{transition: background-color .3s;padding: 20px 12px;font-size: 1.8rem;}
+ul.links li a:hover{background-color: rgba(255,255,255,0.1);}
+h5.connect_title{padding: 0 12px;}
+.page-footer{padding-top: 40px;}
+.page-footer .row{margin-bottom: 30px;}
+footer.page-footer .footer-copyright{height: 70px;line-height: 70px;}
+
+.parallax-container{height:480px;}
+.inner_parallex .header{font-size: 3rem;text-align: left;
+  margin-top: 360px;
+    background-color: rgba(255,255,255,0.5);
+    padding: 18px;
+    text-shadow: 0px 2px 12px #000;
+    display: inline;
+    width:auto !important;
+}

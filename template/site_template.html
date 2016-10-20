@@ -1,26 +1,17 @@
-
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>Musicoin - Every play is born to be equal</title>
+
+    <!-- CSS  -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css?" type="text/css" rel="stylesheet" media="screen,projection"/>
     <meta name="description" content="Musicoin - Every play is born to be equal" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.7">
-
-<link href='//fonts.googleapis.com/css?family=Roboto+Mono|Droid+Sans+Mono' rel="stylesheet" />
-<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-
-<!-- Compiled and minified JavaScript -->
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-
-
-<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
-
-    <link rel="stylesheet" href="/style.css">
 
 
 {% block head_content %}{% endblock %}
@@ -32,46 +23,25 @@
 
 {% block body_header_content %}
 
-<div class="header_div_fixed">
-    <div class="header_div container">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo mont">Musicoin</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/about">How it works</a></li>
+        <li><a href="/musicians">To Musicians</a></li>
+        <li><a href="/developers">To Developers</a></li>
+        <li><a href="http://blog.musicoin.org" target="_blank">Blog</a></li>
+      </ul>
 
-        <div class="header">
-            <ul class="logo_ul">
-                <li>
-
-                    <a href="/" class="headline_link"><img src="/images/logo.png" class="logo" /></a>
-                    <div class="headline">
-                        <div class="headline_text">Musicoin</div>
-                    </div>
-
-
-
-                </li>
-            </ul>
-
-
-            <ul class="top_navbar right_top_navbar">
-
-                <a href="/howItWorks"><li class="link_larger">
-                    How it works
-                </li></a>
-
-                <a href="/musicians"><li class="link_larger">
-                    To musicians
-                </li></a>
-
-                <a href="/developers"><li class="link_larger">
-                    To developers
-                </li></a>
-
-            </ul>
-
-
-        </div>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/about">How it works</a></li>
+        <li><a href="/musicians">To Musicians</a></li>
+        <li><a href="/developers">To Developers</a></li>
+        <li><a href="http://blog.musicoin.org" target="_blank">Blog</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
-</div>
-
-<div class="header_spacer_block"></div>
+  </nav>
 
 {% endblock %}
 
@@ -84,23 +54,46 @@
 
 
 
-<div class="full_block footer_block">
+  <footer class="page-footer teal">
     <div class="container">
+      <div class="row">
+        <div class="col l8 s12">
+          <h5 class="white-text">More from Musicoin</h5>
+          <p class="grey-text text-lighten-4">
+              <!--
+              -->
 
-        <nav>
-            <div class="nav-wrapper">
-                &copy; 2016 musicoin.org  All rights reserved.
-                <ul class="links_ui">
-                    <li><a href="https://slack.musicoin.org/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i></a></li>
-                    <li><a href="https://twitter.com/muscoins" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="https://github.com/muscoin" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                    <li><a href="mailto:musicoin@musicoin.org"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-        </nav>
+          </p>
 
+          <ul>
+              <li><a class="white-text" href="http://blog.musicoin.org" target="_blank">Blog</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col l4 s12">
+          <h5 class="white-text connect_title">Connect with us</h5>
+          <ul class="links">
+            <li><a class="white-text" href="https://slack.musicoin.org/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i></a></li>
+            <li><a class="white-text" href="https://twitter.com/musicoins" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a class="white-text" href="https://github.com/musicoin" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a class="white-text" href="mailto:musicoin@musicoin.org"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-</div>
+    <div class="footer-copyright">
+      <div class="container">
+      &copy; 2016 musicoin.org  All rights reserved. Template by <a class="brown-text text-lighten-3" target="_blank" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
 
 
 {% endblock %}
