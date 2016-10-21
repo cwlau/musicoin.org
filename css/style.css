@@ -81,3 +81,8 @@ footer.page-footer .footer-copyright{height: 70px;line-height: 70px;}
     display: inline;
     width:auto !important;
 }
+.black a{color:#fff;}
+nav ul a:hover{background-color: rgba(255,255,255,0.2);}
+
+img.logo_image{height: 50px;vertical-align: middle;margin-top: -6px;}
+img.home_icon{height:80px;}
