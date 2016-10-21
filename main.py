@@ -159,6 +159,7 @@ class BlogRedirectHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     # routes.DomainRoute(r'<:(slack\.hongcoin\.org|localhost)>', [
     routes.DomainRoute(r'<:(blog.musicoin.org)>', [
+        webapp2.Route('/', BlogRedirectHandler),
         webapp2.Route('/.*', BlogRedirectHandler),
     ]),
 
