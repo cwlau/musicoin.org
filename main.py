@@ -148,10 +148,20 @@ class ReturnHomePageHandler(webapp2.RequestHandler):
         self.redirect("/")
 
 
+class BlogRedirectHandler(webapp2.RequestHandler):
+
+    def get(self):
+        self.redirect("https://medium.com/@musicoin")
+
+
 
 
 app = webapp2.WSGIApplication([
     # routes.DomainRoute(r'<:(slack\.hongcoin\.org|localhost)>', [
+    routes.DomainRoute(r'<:(blog.musicoin.org)>', [
+        webapp2.Route('/.*', BlogRedirectHandler),
+    ]),
+
     routes.DomainRoute(r'<:(musicoin.org|www.musicoin.org|localhost|layout2.musicoin-web.appspot.com)>', [
         webapp2.Route('/', HomePageHandler),
         webapp2.Route('/about', HowItWorksHandler),
