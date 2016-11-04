@@ -63,11 +63,12 @@ footer.page-footer {
 
 h1.mont.teal-text.text-lighten-2{font-size: 3.2em;color:#e8e8e8 !important;margin-top: 100px;}
 .subheader{color:#ffd411 !important;}
-.mont{font-family: 'Montserrat', sans-serif;}
+/*.mont{font-family: 'Montserrat', sans-serif;}*/
+.button-collapse{color:#000;}
 ul.links li{display: inline-block;vertical-align: top;}
 ul.links li a{transition: background-color .3s;padding: 20px 12px;font-size: 1.8rem;}
 ul.links li a:hover{background-color: rgba(255,255,255,0.1);}
-h5.connect_title{padding: 0 12px;}
+.footer_section_padding{padding: 0 12px;}
 .page-footer{padding-top: 40px;}
 .page-footer .row{margin-bottom: 30px;}
 footer.page-footer .footer-copyright{height: 70px;line-height: 70px;}
